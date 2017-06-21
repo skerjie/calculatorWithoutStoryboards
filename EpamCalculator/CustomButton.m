@@ -10,6 +10,8 @@
 
 @implementation CustomButton
 
+#pragma mark - создание и настройка кастомной кнопки с базовыми настройками
+
 - (instancetype)initWithFrameMyCustomBtnWIth:(CGRect)rect andText:(NSString*)text {
   
   CustomButton* button = [[CustomButton alloc] initWithFrame:rect];
