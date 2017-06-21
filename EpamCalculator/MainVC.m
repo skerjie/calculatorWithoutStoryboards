@@ -32,11 +32,11 @@
 
 // кастомные сеттер и геттер
 - (void)setCurrentInput:(double)newValue {
-  self.resultLabel.text = [NSString stringWithFormat:@"%.02f", newValue];
+  self.resultLabel.text = [NSString stringWithFormat:@"%.01f", newValue];
   self.isStillTyping = NO;
 }
 
-//// кастомный сеттер с уюранным лишним 0
+////// кастомный сеттер с уюранным лишним 0
 //- (void)setCurrentInput:(double)newValue {
 //  NSString* value = [NSString stringWithFormat:@"%f", newValue];
 //  NSArray* valueArray = [value componentsSeparatedByString:@"."];

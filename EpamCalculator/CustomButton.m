@@ -15,12 +15,13 @@
   CustomButton* button = [[CustomButton alloc] initWithFrame:rect];
 
   [button.titleLabel setTextAlignment:NSTextAlignmentCenter];
+  [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+  [button setTitleColor:[UIColor colorWithRed:180.0/255.0 green:40.0/255.0 blue:108.0/255.0 alpha:0.7] forState:UIControlStateHighlighted];
   button.layer.cornerRadius = 5.0;
   button.layer.masksToBounds = YES;
   button.layer.borderWidth = 1.0;
   button.layer.borderColor = [UIColor redColor].CGColor;
   [button setTitle:text forState:UIControlStateNormal];
-  [button setTitleColor:[UIColor whiteColor] forState:UIControlStateFocused];
   button.titleLabel.font = [UIFont fontWithName: @"HelveticaNeue-Light" size: 40];
   button.titleLabel.shadowColor = [UIColor darkGrayColor];
   button.titleLabel.shadowOffset = CGSizeMake(-1.0, 2.0);
