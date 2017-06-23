@@ -287,7 +287,7 @@
     self.isStillTyping = NO;
   }
   
-  if ([self.operationSign  isEqual: @"-"]) {
+  if ([self.operationSign  isEqual: @"−"]) {
     self.currentInput = self.firstOperand - self.secondOperand;
     self.isStillTyping = NO;
   }
@@ -298,8 +298,10 @@
   }
   
   if ([self.operationSign  isEqual: @"÷"]) {
+    if (self.currentInput != 0) {
     self.currentInput = self.firstOperand / self.secondOperand;
     self.isStillTyping = NO;
+    }
   }
   
 }
@@ -335,7 +337,12 @@
 // метод извлечения квадратного корня
 - (void)squareRoot:(UIButton*)sender {
   
-  self.currentInput = sqrt(self.currentInput);
+  if (self.currentInput < 0) {
+    self.currentInput = 0;
+  } else {
+    self.currentInput = sqrt(self.currentInput);
+  }
+
 }
 
 
